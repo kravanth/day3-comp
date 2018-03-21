@@ -1,0 +1,34 @@
+{{!-- Static content:
+{{profile-card-static}}
+
+<hr>
+
+<p> Dynamic content #1: </p>
+
+{{profile-card name="Ravi Kumar" avatar="https://randomuser.me/api/portraits/thumb/lego/1.jpg" bio="Great artist"}}
+
+<hr>
+Dynamic content #2 (from route):
+{{profile-card name=model.name avatar=model.avatar bio = model.bio}}  --}}
+
+{{!-- {{button-wrapper  action="buttonClick"}} --}}
+
+  <div>
+  <p>appName: {{input type="text" value=appName}}</p>
+  <p>Triggers: didUpdateAttrs, didReceiveAttrs, willUpdate, 
+       willRender, didUpdate, didRender</p>
+</div>
+<hr />
+<div>
+  <p>data.a.firstObject.a: {{input type="text" value=data.a.firstObject.a}}</p>
+  <p>Triggers: willUpdate, willRender, didUpdate, didRender</p>
+</div>
+<hr />
+<div>
+  <p>data.a.b: {{input type="text" value=data.b}}</p>
+  <p>Triggers: willUpdate, willRender, didUpdate, didRender</p>
+</div>
+
+<hr />
+
+{{life-cycle-demo name=appName data=data}}
